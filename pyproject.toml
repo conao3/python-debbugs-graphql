@@ -13,15 +13,14 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "strawberry-graphql[fastapi]~=0.132.1",
+    "uvicorn~=0.18.3",
 ]
 
 [project.scripts]
-debbugs-graphql = "debbugs_graphql.cli:main"
+debbugs-graphql = "debbugs_graphql.__main__:main"
 
 [project.optional-dependencies]
 dev = [
-    "strawberry-graphql[debug-server]~=0.132.1",
-    "uvicorn~=0.18.3",
     "pytest~=7.1.3",
     "pytest-icdiff~=0.6",
 ]
