@@ -7,7 +7,7 @@ import xml.etree.ElementTree
 from . import types
 
 
-jinja_env = jinja2.Environment()
+jinja_env = jinja2.Environment(autoescape=True)
 
 
 class Client:
