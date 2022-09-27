@@ -1,4 +1,5 @@
 import json
+from typing import Any
 import requests
 import jinja2
 import xml.etree.ElementTree
@@ -54,9 +55,9 @@ class Client:
 
         prefix_len = len('{urn:Debbugs/SOAP}')
         keys = list(types.Status.__fields__.keys())
-        ret = []
+        ret: list[types.Status] = []
         for val in values:
-            attrs = {}
+            attrs: dict[str, Any] = {}
             rest_attrs = {}
             for attr in val:
                 if attr.tag[prefix_len:] in keys:
