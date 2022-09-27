@@ -20,6 +20,9 @@ class Client:
 
     def get_status(self, bugnumber: int) -> types.Status:
         res = self.get_statuses([bugnumber])
+        if not res:
+            raise Exception("No such bug")
+
         return res[0]
 
     def get_statuses(self, bugnumbers: list[int]) -> list[types.Status]:
