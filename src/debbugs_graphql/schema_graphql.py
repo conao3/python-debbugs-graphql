@@ -23,7 +23,13 @@ class Book:
 
 @strawberry.experimental.pydantic.type(model=types.Status, all_fields=True)
 class Status:
-    pass
+    log_modified: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    keywords: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    fixed_date: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    found_date: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    id: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    found: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
+    fixed: strawberry.auto = strawberry.field(deprecation_reason='deprecated')
 
 
 @strawberry.type

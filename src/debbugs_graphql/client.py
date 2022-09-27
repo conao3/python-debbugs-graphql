@@ -50,6 +50,7 @@ class Client:
 """)
         body = tmpl.render(bugnumbers=bugnumbers)
         res = requests.post(self.url, data=body, headers=self.headers)
+        print(res.text)
         if not res.ok:
             raise Exception(res.text)
 
