@@ -15,7 +15,7 @@ debbugs-graphql wraps the Debbugs SOAP API with a GraphQL layer, making it easie
 
 ## Requirements
 
-- Python 3.10 or later
+- Python 3.11 or later
 
 ## Installation
 
